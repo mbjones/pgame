@@ -36,3 +36,4 @@ def gotocell(t, cellx, celly):
 
 def marktic(t, letter):
 	o.write(letter, font=('Arial', 96, 'normal'))
+
