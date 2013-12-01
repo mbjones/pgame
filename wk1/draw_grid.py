@@ -4,17 +4,23 @@
 import turtle
 
 def drawgrid():
+	"""Draw a 400x400 grid on the screen, label axes, and return the Turtle used to draw the grid."""
+
+	turtle.setup(width=900, height=900, startx=0, starty=0)
 	t = turtle.Turtle()
-	t.clear()
 	s = t.getscreen()
+	#s.screensize(420,420)
+	t.hideturtle()
+	t.clear()
 	delay = s.delay()
 	tracer = s.tracer()
 	s.delay(0)
 	s.tracer(0)
 	t.speed(0)
-	for x in range(-400,410,10):
+	maxc = 400
+	for x in range(-1*maxc,maxc+10,10):
 		t.penup()
-		t.goto(x,400)
+		t.goto(x,maxc)
 		t.pendown()
 		if (x % 100 == 0):
 			t.pensize(3)
@@ -24,10 +30,10 @@ def drawgrid():
 			t.pencolor('red')
 		else:
 			t.pencolor('black')
-		t.goto(x,-400)
-	for y in range(400,-410,-10):
+		t.goto(x,-1*maxc)
+	for y in range(maxc,-1*maxc-10,-10):
 		t.penup()
-		t.goto(-400,y)
+		t.goto(-1*maxc,y)
 		t.pendown()
 		if (y % 100 == 0):
 			t.pensize(4)
@@ -37,25 +43,25 @@ def drawgrid():
 			t.pencolor('red')
 		else:
 			t.pencolor('black')
-		t.goto(400,y)
-	labelaxes(t)
+		t.goto(maxc,y)
+	labelaxes(t, maxc)
 	s.tracer(tracer)
 	s.delay(delay)
 	t.speed(3)
 	return(t)
 
-def labelaxes(t):
+def labelaxes(t, maxc):
 	t.penup()
-	t.goto(0, 410)
+	t.goto(0, maxc+10)
 	t.write('0')
-	t.goto(-410, 410)
+	t.goto(-1*maxc-10, maxc+10)
 	t.write('-400, 400')
-	t.goto(410, 410)
+	t.goto(maxc+10, maxc+10)
 	t.write('400, 400')
-	t.goto(410, -410)
+	t.goto(maxc+10, -1*maxc-10)
 	t.write('400, -400')
-	t.goto(-410, -410)
+	t.goto(-1*maxc-10, -1*maxc-10)
 	t.write('-400, -400')
-	t.goto(-410, 0)
+	t.goto(-1*maxc-10, 0)
 	t.write('0')
 
