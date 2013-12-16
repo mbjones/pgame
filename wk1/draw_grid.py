@@ -9,6 +9,7 @@ def drawgrid():
     turtle.setup(width=900, height=900, startx=0, starty=0)
     t = turtle.Turtle()
     s = t.getscreen()
+    s.clearscreen()
     #s.screensize(420,420)
     t.hideturtle()
     t.clear()
@@ -64,4 +65,45 @@ def labelaxes(t, maxc):
     t.write('-400, -400')
     t.goto(-1*maxc-10, 0)
     t.write('0')
+
+def line(x1, y1, x2, y2):
+    """Draw a line on the screen between the two given points"""
+    t = turtle.Turtle()
+    s = t.getscreen()
+    t.hideturtle()
+    delay = s.delay()
+    tracer = s.tracer()
+    s.delay(0)
+    s.tracer(0)
+    t.speed(0)
+    t.color('blue')
+    t.pensize(5)
+    t.up()
+    t.goto(x1,y1)
+    t.down()
+    t.goto(x2,y2)
+    s.delay(delay)
+    s.tracer(tracer)
+
+def tri(x1, y1, x2, y2, x3, y3):
+    """Draw a triangle on the screen between the given points"""
+    t = turtle.Turtle()
+    s = t.getscreen()
+    t.hideturtle()
+    delay = s.delay()
+    tracer = s.tracer()
+    #s.delay(0)
+    #s.tracer(0)
+    #t.speed(0)
+    t.color('darkgreen')
+    t.pensize(5)
+    t.up()
+    t.goto(x1,y1)
+    t.down()
+    t.goto(x2,y2)
+    t.goto(x3,y3)
+    t.goto(x1,y1)
+    s.delay(delay)
+    s.tracer(tracer)
+
 
