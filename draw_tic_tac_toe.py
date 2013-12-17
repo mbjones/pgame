@@ -7,25 +7,23 @@ def drawboard():
     t = turtle.Turtle()
     t.pensize(5)
     t.color('red')
-    t.clear()
-    t.penup()
-    t.goto(100,300)
-    t.pendown()
-    t.goto(100,-300)
-    t.penup()
-    t.goto(-100,-300)
-    t.pendown()
-    t.goto(-100,300)
-    t.penup()
-    t.goto(-300,100)
-    t.pendown()
-    t.goto(300,100)
-    t.penup()
-    t.goto(300,-100)
-    t.pendown()
-    t.goto(-300,-100)
+    line(t, -300, 100, 300,  100)
+    line(t, -300,-100, 300, -100)
+    line(t, -100, 300,-100, -300)
+    line(t,  100, 300, 100, -300)
     return(t);
 
+def cs():
+    t = turtle.Turtle()
+    s = t.getscreen()
+    s.clearscreen()
+    
+def line(t, x1, y1, x2, y2):
+    t.penup()
+    t.goto(x1, y1)
+    t.pendown()
+    t.goto(x2, y2)
+    
 def gotocell(t, cellx, celly):
     t.penup()
     originx = -235
