@@ -100,17 +100,22 @@ def whichCell(x, y):
     
 def q():
     turtle.bye()
-    
+
+def newGame():
+    main()
+        
 def main():
     global xTurn
     xTurn = True
     global moves
     moves = [[0]*3 for x in xrange(3)]
-    
-    win = turtle.Screen()
+    cs()
     t = drawboard()
+
+    win = turtle.Screen()
     win.onclick(processClick)
     win.onkey(q, "q")
+    win.onkey(newGame, "n")
     win.listen()
 
     turtle.mainloop()
