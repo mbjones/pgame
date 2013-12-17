@@ -106,4 +106,24 @@ def tri(x1, y1, x2, y2, x3, y3):
     s.delay(delay)
     s.tracer(tracer)
 
-
+def rect(x1, y1, x2, y2):
+    """Draw a rectange on the screen between the two given points"""
+    t = turtle.Turtle()
+    s = t.getscreen()
+    t.hideturtle()
+    delay = s.delay()
+    tracer = s.tracer()
+    #s.delay(0)
+    #s.tracer(0)
+    #t.speed(0)
+    t.color('purple')
+    t.pensize(5)
+    t.up()
+    t.goto(x1,y1)
+    t.down()
+    t.goto(x2,y1)
+    t.goto(x2,y2)
+    t.goto(x1,y2)
+    t.goto(x1,y1)
+    s.delay(delay)
+    s.tracer(tracer)
