@@ -45,16 +45,17 @@ def processClick(x, y):
         t.hideturtle()
         col = (cell-1) % 3 + 1
         row = (cell - ((cell-1) % 3) - 1)/3 + 1
-        gotocell(t, col, row)
-        if (xTurn):
-            moves[row-1][col-1] = 1
-            marktic(t, 'X')
-            xTurn = False
-        else:
-            moves[row-1][col-1] = 4
-            marktic(t, 'O')
-            xTurn = True
-    checkWin(moves)
+        if moves[row-1][col-1] == 0:
+            gotocell(t, col, row)
+            if (xTurn):
+                moves[row-1][col-1] = 1
+                marktic(t, 'X')
+                xTurn = False
+            else:
+                moves[row-1][col-1] = 4
+                marktic(t, 'O')
+                xTurn = True
+            checkWin(moves)
     
 def checkWin(moves):
     # Now test if we've hit three in a row 
