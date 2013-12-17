@@ -65,10 +65,18 @@ def checkWin(moves):
     for totals in [ctotals, rtotals, diags]:
         for x in totals:
             if (x == 3):
-                print("X Wins")
+                announceWin("X")
             elif (x == 12):
-                print("O Wins")
-    
+                announceWin("O") 
+                
+def announceWin(who):
+    t = turtle.Turtle()
+    t.color('red')
+    t.up()
+    t.goto(-150, 290)
+    t.down()
+    t.write(who+" Wins!", font=('Arial', 96, 'normal'))
+      
 def whichCell(x, y):
     col = -10;
     row = -10;
