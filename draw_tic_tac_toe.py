@@ -58,20 +58,16 @@ def processClick(x, y):
     
 def checkWin(moves):
     # Now test if we've hit three in a row 
-    # TODO: Check diagonal sums too    
     ctotals = map(sum,zip(*moves))
     rtotals = [ sum(x) for x in moves ]
-    #for totals in [ctotals, rtotals]:
-    for x in ctotals:
-        if (x == 3):
-            print("X Wins")
-        elif (x == 12):
-            print("O Wins")
-    for x in rtotals:
-        if (x == 3):
-            print("X Wins")
-        elif (x == 12):
-            print("O Wins")
+    diags = [moves[0][0] + moves[1][1] + moves[2][2],
+        moves[0][2] + moves[1][1] + moves[2][0]]
+    for totals in [ctotals, rtotals, diags]:
+        for x in totals:
+            if (x == 3):
+                print("X Wins")
+            elif (x == 12):
+                print("O Wins")
     
 def whichCell(x, y):
     col = -10;
@@ -93,7 +89,7 @@ def whichCell(x, y):
     cell = row + col
     return(cell)
     
-def quit():
+def q():
     turtle.bye()
     
 def main():
@@ -105,7 +101,7 @@ def main():
     win = turtle.Screen()
     t = drawboard()
     win.onclick(processClick)
-    win.onkey(quit, "q")
+    win.onkey(q, "q")
     win.listen()
 
     turtle.mainloop()
