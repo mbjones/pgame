@@ -10,12 +10,12 @@ Interested in computer games and programming?  Making computer games requires a 
 
 Schedule
 --------
-- Week 1: Matt: Drawing Tic-Tac-Toe with turtles, Variables, Assignment, Functions
-- Week 2: Matt: Creating a function to draw the tic-tac-toe board
-- Week 3: Matt: Intro to for and loops and conditionals
-- Week 4: Ryan: Drawing X and O, Finding grid coordinates
-- Week 5: Matt: Arrays: Storing game state and determining a winner
-- Week 6: Matt: The Event Loop: creating 'New Game' and 'Quit' Functions
-- Week 7: Ryan:
-- Week 8: Matt: 
-- Week 9: Ryan:
+- Dec  2: Matt: Drawing Tic-Tac-Toe with turtles, Variables, Assignment, Functions
+- Dec  9: Matt: Creating a function to draw the tic-tac-toe board
+- Dec 16: Matt: Intro to for and loops and conditionals
+- Jan  6: Ryan: Drawing X and O, Finding grid coordinates
+- Jan 13: Matt: Arrays: Storing game state and determining a winner
+- Jan 27: Matt: The Event Loop: creating 'New Game' and 'Quit' Functions
+- Feb  3: Ryan:
+- Feb 10: Matt: 
+- Feb 24: Ryan:
