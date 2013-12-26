@@ -5,6 +5,7 @@
 import turtle
     
 def drawboard():
+    '''Draw the Tic Tac Toe grid with a line spacing of 200 units.'''
     t = turtle.Turtle()
     t.pensize(5)
     t.color('red')
@@ -15,17 +16,21 @@ def drawboard():
     return(t);
 
 def cs():
+    '''Clear the screen of all drawing.'''
     t = turtle.Turtle()
     s = t.getscreen()
     s.clearscreen()
     
 def line(t, x1, y1, x2, y2):
+    '''Draw a line from x1,y1 to x2,y2.'''
     t.penup()
     t.goto(x1, y1)
     t.pendown()
     t.goto(x2, y2)
     
 def gotocell(t, cellx, celly):
+    '''Position turtle in a given cell in location proper for writing an X or O. 
+    The cells are indexed from 1 to 3 in both dimensions.'''
     t.penup()
     originx = -235
     originy = 140
@@ -35,9 +40,11 @@ def gotocell(t, cellx, celly):
     t.pendown()
     
 def marktic(t, letter):
+    '''Write an X or O letter using a specific font and size.'''
     t.write(letter, font=('Arial', 96, 'normal'))
 
 def processClick(x, y):
+    '''Upon mouse click, determine which cell it is in, store the move, and draw it on the screen.'''
     global xTurn
     cell = whichCell(x, y)
     if (cell > 0):
@@ -58,6 +65,7 @@ def processClick(x, y):
             checkWin(moves)
     
 def checkWin(moves):
+    '''Check if we have any row, column, or diagonal with three in a row.'''
     # Now test if we've hit three in a row 
     ctotals = map(sum,zip(*moves))
     rtotals = [ sum(x) for x in moves ]
@@ -71,6 +79,7 @@ def checkWin(moves):
                 announceWin("O") 
                 
 def announceWin(who):
+    '''Announce that X or O has won the game.'''
     t = turtle.Turtle()
     t.color('red')
     t.up()
@@ -79,6 +88,8 @@ def announceWin(who):
     t.write(who+" Wins!", font=('Arial', 96, 'normal'))
       
 def whichCell(x, y):
+    '''Process an x,y coordinate pair to determine which cell the click is in, 
+    returning a cell number from 1 to 9.'''
     col = -10;
     row = -10;
     if (-300 < x < -100):
@@ -99,12 +110,15 @@ def whichCell(x, y):
     return(cell)
     
 def q():
+    '''Quit the program.'''
     turtle.bye()
 
 def newGame():
+    '''Reinitialize the program and start a new game.'''
     main()
         
 def main():
+    '''Reinitialize the program and start a new game.'''
     global xTurn
     xTurn = True
     global moves
