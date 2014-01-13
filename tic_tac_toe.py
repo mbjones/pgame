@@ -39,12 +39,12 @@ def markletter(t, cellx, celly, letter):
     t.goto(newx,newy)
     t.pendown()
     t.write(letter, font=('Arial', 96, 'normal'))
-
-def whichCell(x, y):
-    '''Process an x,y coordinate pair to determine which cell the click is in, 
-    returning a cell number from 1 to 9.'''
-    col = -10;
-    row = -10;
+    
+def processClick(x, y):
+    '''Upon mouse click, determine which cell it is in, store the move, and draw it on the screen.'''
+    global xTurn
+    col = 0
+    row = 0
     if (-300 < x < -100):
         col = 1
     elif (-100 < x < 100):
@@ -53,24 +53,15 @@ def whichCell(x, y):
         col = 3
     
     if (-300 < y < -100):
-        row = 6
-    elif (-100 < y < 100):
         row = 3
+    elif (-100 < y < 100):
+        row = 2
     elif (100 < y < 300):
-        row = 0
-    
-    cell = row + col
-    return(cell)
-    
-def processClick(x, y):
-    '''Upon mouse click, determine which cell it is in, store the move, and draw it on the screen.'''
-    global xTurn
-    cell = whichCell(x, y)
-    if (cell > 0):
+        row = 1
+        
+    if ((col > 0) & (row > 0)):
         t = turtle.Turtle()
         t.hideturtle()
-        col = (cell-1) % 3 + 1
-        row = (cell - ((cell-1) % 3) - 1)/3 + 1
         if moves[row-1][col-1] == 0:
             if (xTurn):
                 moves[row-1][col-1] = 1
