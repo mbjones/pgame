@@ -13,9 +13,9 @@ Schedule
 - Dec  2: Matt: Drawing Tic-Tac-Toe with turtles, Variables, Assignment, Functions
 - Dec  9: Matt: Creating a function to draw the tic-tac-toe board
 - Dec 16: Matt: Intro to for and loops and conditionals
-- Jan  6: Ryan: Drawing X and O, Finding grid coordinates
-- Jan 13: Matt: Arrays: Storing game state and determining a winner
-- Jan 27: Matt: The Event Loop: creating 'New Game' and 'Quit' Functions
-- Feb  3: Ryan:
-- Feb 10: Matt: 
-- Feb 24: Ryan:
+- Jan  6: Ryan: Creating functions for the Tic-Tac-Toe board
+- Jan 13: Matt: Drawing X and O, Finding grid coordinates
+- Jan 27: Matt: Class canceled due to field trip
+- Feb  3: Ryan: Finish functions for grid, X & O, and finding coordinates
+- Feb 10: Matt: Storing game state and determining a winner
+- Feb 24: Ryan: The Event Loop: creating 'New Game' and 'Quit' Functions
