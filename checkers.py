@@ -37,6 +37,11 @@ def drawboard():
     t = turtle.Turtle()
     t.hideturtle()
     t.speed(0)
+    s = t.getscreen()
+    delay = s.delay()
+    tracer = s.tracer()
+    #s.delay(0)
+    s.tracer(0)
     t.pensize(1)
     color='black'
     size = 80
