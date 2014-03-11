@@ -41,7 +41,7 @@ def drawboard():
     delay = s.delay()
     tracer = s.tracer()
     #s.delay(0)
-    s.tracer(0)
+    #s.tracer(0)
     t.pensize(1)
     color='black'
     size = 80
