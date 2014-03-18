@@ -1,0 +1,85 @@
+<h1 id="quick-reference-sheet">Quick reference sheet</h1>
+<h2 id="saving-your-work.">Saving your work.</h2>
+<p>We save our work in Google Drive.</p>
+<h3 id="to-get-your-file">To get your file</h3>
+<ul>
+<li>Log in to Google drive (http://drive.google.com)
+<ul>
+<li>Username: jccspython</li>
+<li>Password: check with instructor</li>
+</ul></li>
+<li>Open the 'python-class/2014-trimester-3' folder</li>
+<li>Drag the 'matt-start.py' file (or one with your name) to your computer</li>
+</ul>
+<h3 id="to-edit-your-file">To edit your file</h3>
+<ul>
+<li>Open it on your local computer using 'TextEdit' application</li>
+<li>Make changes</li>
+<li>Save file</li>
+</ul>
+<h3 id="to-save-your-file-to-google-drive">To save your file to Google Drive</h3>
+<ul>
+<li>Open your local working folder</li>
+<li>Drag your file to the Google Drive '2014-trimester-3' folder</li>
+</ul>
+<h2 id="launch-python">Launch python</h2>
+<ul>
+<li>We are using ipython as our language, launch it by:
+<ul>
+<li>Open the 'Terminal' application</li>
+<li>Type <code>ipython</code> and press return</li>
+<li>This should bring you to the ipython command prompt</li>
+</ul></li>
+</ul>
+<h2 id="python-turtle-commands">Python Turtle commands</h2>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">import</span> turtle
+jane = turtle.Turtle()
+jane.left(<span class="dv">90</span>)
+jane.forward(<span class="dv">100</span>)
+jane.right(<span class="dv">90</span>)
+jane.color(<span class="st">&#39;red&#39;</span>)
+jane.forward(<span class="dv">100</span>)
+jane.penup()
+jane.goto(-<span class="dv">200</span>, <span class="dv">200</span>)
+jane.pendown()
+jane.forward(<span class="dv">100</span>)</code></pre>
+<h3 id="loading-and-running-code">Loading and running code</h3>
+<ul>
+<li>To run code in ipython from your text editor (TextEdit)</li>
+<li>Copy and paste the code by:
+<ul>
+<li>Copy the code to be run from TextEdit</li>
+<li>At the ipython prompt, type <code>%paste</code>, which will paste the code in and run it</li>
+<li>If your don't get the command prompt back, hit <code>return</code> to run the code</li>
+</ul></li>
+<li>Or, you can load code from a file
+<ul>
+<li>Be sure to start ipython from the directory in which you have the code (can be your home directory)</li>
+<li>Load the code into python using:
+<ul>
+<li><code>%load filename.py</code> where filename.py is the name of the file containing python commands to load</li>
+<li>you may have to hit return to execute the last line of the file</li>
+</ul></li>
+</ul></li>
+</ul>
+<h3 id="functions">Functions</h3>
+<ul>
+<li>Draw a square; notice that you have to issue the same commands 4 times?</li>
+<li>Functions are used to create a block of code you want to use more than once</li>
+<li>Here is a function for adding two numbers together:</li>
+</ul>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> add(x, y):
+    <span class="dt">sum</span> = x + y
+    <span class="kw">return</span> <span class="dt">sum</span></code></pre>
+<ul>
+<li>Can you make a function that returns the product of the numbers?
+<ul>
+<li>Hint: you need to indent using the same characters for it to work (for example, four spaces, or one tab)</li>
+</ul></li>
+<li><p>How about the quotient?</p></li>
+<li>Activities
+<ul>
+<li>Write a function that draws a line between two points using the turtle.goto(x, y) command</li>
+<li>Write a function that draws a square at point (x,y) with a given side length of <code>size</code></li>
+</ul></li>
+</ul>
