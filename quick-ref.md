@@ -42,7 +42,7 @@ jane.pendown()
 jane.forward(100)
 ```
 
-### Loading and running code
+## Loading and running code
 - To run code in ipython from your text editor (TextEdit)
 - Copy and paste the code by:
     - Copy the code to be run from TextEdit
@@ -54,7 +54,7 @@ jane.forward(100)
         - `%load filename.py` where filename.py is the name of the file containing python commands to load
         - you may have to hit return to execute the last line of the file
 
-### Functions
+## Functions
 - Draw a square; notice that you have to issue the same commands 4 times?
 - Functions are used to create a block of code you want to use more than once
 - Here is a function for adding two numbers together:
