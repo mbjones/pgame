@@ -47,7 +47,7 @@ jane.forward(100)
 - Copy and paste the code by:
     - Copy the code to be run from TextEdit
     - At the ipython prompt, type `%paste`, which will paste the code in and run it
-    - If your don't get the command prompt back, hit `return` to run the code
+    - If you do not get the command prompt back, hit `return` to run the code
 - Or, you can load code from a file
     - Be sure to start ipython from the directory in which you have the code (can be your home directory)
     - Load the code into python using:
@@ -64,6 +64,7 @@ def add(x, y):
     sum = x + y
     return sum
 ```
+- Once you define a function, you call it like any other python function.  E.g., `mysum = add(5, 6)`
 - Can you make a function that returns the product of the numbers?
     - Hint: you need to indent using the same characters for it to work (for example, four spaces, or one tab)
 - How about the quotient?
@@ -72,3 +73,16 @@ def add(x, y):
     - Write a function that draws a line between two points using the turtle.goto(x, y) command
     - Write a function that draws a square at point (x,y) with a given side length of `size`
 
+## Loops
+- Often you want to run the same code multiple times.  You can use a `for` loop to accomplish this:
+
+```python
+import turtle
+for x in range(100):
+    turtle.forward(x)
+    turtle.left(x)
+```
+- Activities
+    - Write a loop that draws a square with a turtle
+    - Write a square function from above using a loop (hint: there will be two steps in the loop)
+    - Can you write other functions to draw various shapes?

@@ -50,7 +50,7 @@ jane.forward(<span class="dv">100</span>)</code></pre>
 <ul>
 <li>Copy the code to be run from TextEdit</li>
 <li>At the ipython prompt, type <code>%paste</code>, which will paste the code in and run it</li>
-<li>If your don't get the command prompt back, hit <code>return</code> to run the code</li>
+<li>If you do not get the command prompt back, hit <code>return</code> to run the code</li>
 </ul></li>
 <li>Or, you can load code from a file
 <ul>
@@ -72,6 +72,7 @@ jane.forward(<span class="dv">100</span>)</code></pre>
     <span class="dt">sum</span> = x + y
     <span class="kw">return</span> <span class="dt">sum</span></code></pre>
 <ul>
+<li>Once you define a function, you call it like any other python function. E.g., <code>mysum = add(5, 6)</code></li>
 <li>Can you make a function that returns the product of the numbers?
 <ul>
 <li>Hint: you need to indent using the same characters for it to work (for example, four spaces, or one tab)</li>
@@ -81,5 +82,21 @@ jane.forward(<span class="dv">100</span>)</code></pre>
 <ul>
 <li>Write a function that draws a line between two points using the turtle.goto(x, y) command</li>
 <li>Write a function that draws a square at point (x,y) with a given side length of <code>size</code></li>
+</ul></li>
+</ul>
+<h2 id="loops">Loops</h2>
+<ul>
+<li>Often you want to run the same code multiple times. You can use a <code>for</code> loop to accomplish this:</li>
+</ul>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">import</span> turtle
+<span class="kw">for</span> x in <span class="dt">range</span>(<span class="dv">100</span>):
+    turtle.forward(x)
+    turtle.left(x)</code></pre>
+<ul>
+<li>Activities
+<ul>
+<li>Write a loop that draws a square with a turtle</li>
+<li>Write a square function from above using a loop (hint: there will be two steps in the loop)</li>
+<li>Can you write other functions to draw various shapes?</li>
 </ul></li>
 </ul>
