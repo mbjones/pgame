@@ -102,10 +102,6 @@ def q():
 
 def newGame():
     '''Reinitialize the program and start a new game.'''
-    main()
-        
-def main():
-    '''Reinitialize the program and start a new game.'''
     global xTurn
     xTurn = True
     global moves
@@ -122,5 +118,5 @@ def main():
     turtle.mainloop()
     
 if __name__ == '__main__':
-    msg = main()
+    msg = newGame()
     
