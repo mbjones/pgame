@@ -78,7 +78,7 @@ def add(x, y):
 
 ```python
 import turtle
-for x in range(100):
+for x in range(75):
     turtle.forward(x)
     turtle.left(x)
 ```
@@ -86,3 +86,12 @@ for x in range(100):
     - Write a loop that draws a square with a turtle
     - Write a square function from above using a loop (hint: there will be two steps in the loop)
     - Can you write other functions to draw various shapes?
+
+```python
+def square(x):
+    t = turtle.Turtle()
+    for i in range(4):
+        t.forward(x)
+        t.left(90)
+```
+

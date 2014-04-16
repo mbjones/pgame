@@ -89,7 +89,7 @@ jane.forward(<span class="dv">100</span>)</code></pre>
 <li>Often you want to run the same code multiple times. You can use a <code>for</code> loop to accomplish this:</li>
 </ul>
 <pre class="sourceCode python"><code class="sourceCode python"><span class="ch">import</span> turtle
-<span class="kw">for</span> x in <span class="dt">range</span>(<span class="dv">100</span>):
+<span class="kw">for</span> x in <span class="dt">range</span>(<span class="dv">75</span>):
     turtle.forward(x)
     turtle.left(x)</code></pre>
 <ul>
@@ -100,3 +100,8 @@ jane.forward(<span class="dv">100</span>)</code></pre>
 <li>Can you write other functions to draw various shapes?</li>
 </ul></li>
 </ul>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> square(x):
+    t = turtle.Turtle()
+    <span class="kw">for</span> i in <span class="dt">range</span>(<span class="dv">4</span>):
+        t.forward(x)
+        t.left(<span class="dv">90</span>)</code></pre>
