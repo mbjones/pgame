@@ -19,3 +19,4 @@ Schedule
 - Feb  3: Ryan: Finish functions for grid, X & O, and finding coordinates
 - Feb 10: Matt: Storing game state and determining a winner
 - Feb 24: Ryan: The Event Loop: creating 'New Game' and 'Quit' Functions
+ 
